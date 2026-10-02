@@ -34,7 +34,6 @@ This dataset applies to:
 
 ### Tracking evidence creation
 As a policy officer...
-* I need to present an evidence gathering story that is useful to PINS
 * I need to track the back and forth of evidence creation with a view to explaining the steps that I took and why
 * I need to track the back and forth of evidence creation, including dates, with a view to generating efficiency data over time
 * I need to audit change requests and reasons
@@ -51,7 +50,7 @@ As an inspector...
 As a policy officer...
 * I need to explicitly label a document as part of my evidence base
 * I need to explicitly label a document as a support document
-* I need to store to evidence that has its source in dashboards or datasets, e.g. updated statistical data
+* I need to store evidence that has its source in dashboards or datasets, e.g. updated statistical data
 
 ### Drafting
 As a policy officer...
