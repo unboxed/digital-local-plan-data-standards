@@ -11,10 +11,16 @@ The intent is to:
 * surface gaps and ambiguities,
 * prompt discussion.
 
+## Ethos
+
+* We should demonstrate the *benefits* of proposed data standards 
+* Additional fields and datasets should be proposed only where a well-defined benefit can be realised
+
 ## Conventions in use in this repository
 
-* Files in a given folder are likely to have relationships which may or may not already be defined.
 * If a file name begins with `_` it is a placeholder and may be empty at present.
+* Files in a given folder are likely to have relationships which may or may not already be defined.
+* We have left out reference to the tabular conventions used by MHCLG (`prefix` field and `curie` type (compact URI)) where new datasets are being tested/proposed given they are not currently part of the ecosystem.
 
 ## Key references
 

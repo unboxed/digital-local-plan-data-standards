@@ -1,5 +1,5 @@
 
-This is an existing model in the [official datasets list for local plans](https://www.planning.data.gov.uk/dataset/development-plan-document-type).
+This is an existing dataset in the [official datasets list for local plans](https://www.planning.data.gov.uk/dataset/development-plan-document-type).
 
 ### Existing dataset
 
@@ -39,6 +39,16 @@ Entries defined in MHCLG specification:
 
 ## Scope for co-design
 
-* What other 'types' might be included in this list?
+* What 'types' are missing from this list?
 * Are there other forms of evidence you would want to store in your evidence base that do not fit this dataset?
-* How would you like to represent data that is not stored in documents?
+* Do you need to represent data that is not stored in documents? What are the user needs associated with non-documentary evidence?
+
+## Sample additional entries (types)
+
+- `area-appraisal`
+- `notice`
+- `article-4-document`
+- `authoritative-boundary`
+- `extension-report`
+- `designation-report`
+- `boundary`

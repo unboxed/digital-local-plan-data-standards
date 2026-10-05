@@ -1,5 +1,5 @@
 
-This is an existing model in the [official datasets list for local plans](https://www.planning.data.gov.uk/dataset/development-plan-document).
+This is an existing dataset in the [official datasets list for local plans](https://www.planning.data.gov.uk/dataset/development-plan-document).
 
 ### Existing dataset
 
@@ -18,17 +18,19 @@ This dataset applies to:
 | `entity` | integer |  |  |
 | `name` | string |  |  |
 | `notes` | text |  |  |
-| `organisation` | curie |  | belongs_to |
-| `prefix` | string |  | for compact URI in MHCLG spec |
 | `reference` | string |  |  |
 | `entry-date` | datetime |  |  |
 | `start-date` | datetime |  |  |
 | `end-date` | datetime |  |  |
+| `organisation` | curie |  | belongs_to |
+| `prefix` | string |  | for compact URI in MHCLG spec |
 
 ## Scope for co-design
 
 * Is this dataset adequate to store references to all types of documents that make up the evidence base?
-* What additional fields or related datasets might be needed to adequately track evidence creation?
+* Is it beneficial to distinguish between commissioned evidence documents and other types?
+* What additional fields or related datasets might be needed to adequately track evidence creation? 
+* What requirements (legislation, NPPF policies, and other requirements) should evidence be able to demonstrate it addresses? Is type and note sufficient, or would a structured reference back to a specific requirement be beneficial?
 
 ## User needs
 
@@ -65,8 +67,31 @@ As a policy officer...
 * I need to search my evidence base with a keyword during an examination hearing to a find relevant fact or figure for sharing with my Director (intradocument search)
 * I need to easily view the evidence that supports a specific policy
 
-## Proposed model
+## Amended dataset for further iteration
 
+| Field | Type | Required | Notes |
+| ----- | ----- | ----- | ----- |
+| `reference` | string |  |  |
+| `name` | string |  |  |
+| `description` | string |  |  |
+| `development-plan` | string |  |  |
+| `document-types` | string |  |  |
+| `document-url` | url |  |  |
+| `documentation-url` | url |  |  |
+| `entity` | integer |  |  |
+| `notes` | text |  |  |
+| `dataset` | reference |  |  |
+| `consultant-id` | reference |  |  |
+| `commenced-date` | datetime |  |  |
+| `finalised-date` | datetime |  |  |
+| `document-id` | string |  |  |
+| `chapter` | reference |  |  |
+| `evidence` | bool |  | `true`/`false` |
+| `requirement` | reference |   | regulation type  |
+| `requirement-reference` | string |   | free text reference |
+| `entry-date` | datetime |  |  |
+| `start-date` | datetime |  |  |
+| `end-date` | datetime |  |  |
 
 ## Example JSON
 
