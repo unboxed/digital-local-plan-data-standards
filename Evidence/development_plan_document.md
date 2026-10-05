@@ -15,18 +15,20 @@ This dataset applies to:
 | `document-types` | string |  |  |
 | `document-url` | url |  |  |
 | `documentation-url` | url |  |  |
-| `entity` | integer |  |  |
 | `name` | string |  |  |
 | `notes` | text |  |  |
-| `reference` | string |  |  |
 | `entry-date` | datetime |  |  |
 | `start-date` | datetime |  |  |
 | `end-date` | datetime |  |  |
+| `prefix` | string |  | |
+| `reference` | string |  |  |
 | `organisation` | curie |  | belongs_to |
-| `prefix` | string |  | for compact URI in MHCLG spec |
+| `entity` | integer |  |  |
+
 
 ## Scope for co-design
 
+* Currently a local plan is one instance of a development plan, an inspector's report be another. Is this what you would expect to be included in a development-plan-document dataset? 
 * Is this dataset adequate to store references to all types of documents that make up the evidence base?
 * Is it beneficial to distinguish between commissioned evidence documents and other types?
 * What additional fields or related datasets might be needed to adequately track evidence creation? 
@@ -71,14 +73,12 @@ As a policy officer...
 
 | Field | Type | Required | Notes |
 | ----- | ----- | ----- | ----- |
-| `reference` | string |  |  |
 | `name` | string |  |  |
 | `description` | string |  |  |
 | `development-plan` | string |  |  |
 | `document-types` | string |  |  |
 | `document-url` | url |  |  |
 | `documentation-url` | url |  |  |
-| `entity` | integer |  |  |
 | `notes` | text |  |  |
 | `dataset` | reference |  |  |
 | `consultant-id` | reference |  |  |
@@ -92,6 +92,12 @@ As a policy officer...
 | `entry-date` | datetime |  |  |
 | `start-date` | datetime |  |  |
 | `end-date` | datetime |  |  |
+
+### Associations
+- `belongs_to` `Organisation`
+- `belongs_to` `DevelopmentPlan`
+- `has_one` `DevelopmentPlanDocumentType`
+- Audited by the [Audited gem](https://github.com/collectiveidea/audited) tracking changes with associated `User` in a separate, referenceable model
 
 ## Example JSON
 

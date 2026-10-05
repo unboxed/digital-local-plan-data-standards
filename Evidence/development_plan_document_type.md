@@ -10,14 +10,14 @@ This dataset applies to:
 | Field | Type | Required | Notes |
 | ----- | ----- | ----- | ----- |
 | `description` | string |  |  |
-| `entity` | integer |  |  |
 | `name` | string |  |  |
 | `notes` | text |  |  |
-| `prefix` | string |  | for compact URI in MHCLG spec |
-| `reference` | string |  |  |
 | `entry-date` | datetime |  |  |
 | `start-date` | datetime |  |  |
 | `end-date` | datetime |  |  |
+| `prefix` | string |  |  |
+| `reference` | string |  |  |
+| `entity` | integer |  |  |
 
 Entries defined in MHCLG specification:
 - `local-plan`
@@ -52,3 +52,6 @@ Entries defined in MHCLG specification:
 - `extension-report`
 - `designation-report`
 - `boundary`
+
+### Associations
+- `belongs_to` `DevelopmentPlanDocument`
