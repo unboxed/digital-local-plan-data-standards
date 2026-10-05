@@ -4,9 +4,8 @@ This is a draft proposed dataset that does not currently exist in draft or publi
 
 | Field | Type | Required | Notes |
 | ----- | ----- | ----- | ----- |
-| `name` | string |  |  |
-| `type` | reference |  |  |
-| `entry-date` | datetime |  |  |
-| `start-date` | datetime |  |  |
-| `end-date` | datetime |  |  |
+| `uuid` | uuid | | unique identifier | 
+| `organisation_name` | string | optional | | 
+| `notes` | text |  |  |
+| `entry-date` datetime |  |  |
 | `reference` | string |  |  |

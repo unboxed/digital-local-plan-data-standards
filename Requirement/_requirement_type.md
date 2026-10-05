@@ -1,4 +1,4 @@
-This is a proposed dataset that does not currently exist in draft or published form.
+This is a draft proposed dataset that does not currently exist in draft or published form.
 
 `requirement-type` refers to regulations and non-regulatory requirements that local plans must adhere to:
 - NPPF policies

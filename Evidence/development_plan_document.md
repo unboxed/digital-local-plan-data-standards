@@ -28,7 +28,7 @@ This dataset applies to:
 
 ## Scope for co-design
 
-* Currently a local plan is one instance of a development plan, an inspector's report be another. Is this what you would expect to be included in a development-plan-document dataset? 
+* Currently a local plan is one instance of a development plan, the neighbourhood plan and inspector's report would be among the others. Is this what you would expect to be included in a development-plan-document dataset? 
 * Is this dataset adequate to store references to all types of documents that make up the evidence base?
 * Is it beneficial to distinguish between commissioned evidence documents and other types?
 * What additional fields or related datasets might be needed to adequately track evidence creation? 
