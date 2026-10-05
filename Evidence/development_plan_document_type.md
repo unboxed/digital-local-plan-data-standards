@@ -39,4 +39,6 @@ Entries defined in MHCLG specification:
 
 ## Scope for co-design
 
-* Is this dataset adequate to store references to all types of documents that make up the evidence base?
+* What other 'types' might be included in this list?
+* Are there other forms of evidence you would want to store in your evidence base that do not fit this dataset?
+* How would you like to represent data that is not stored in documents?
