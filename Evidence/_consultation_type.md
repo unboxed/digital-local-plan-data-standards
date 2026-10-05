@@ -9,3 +9,8 @@ This is a draft proposed dataset that does not currently exist in draft or publi
 | `start-date` | datetime |  |  |
 | `end-date` | datetime |  |  |
 | `reference` | string |  |  |
+
+Entries proposed:
+- `regulation-18`
+- `proposed-local-plan-content-and-evidence`
+- `proposed-plan`
