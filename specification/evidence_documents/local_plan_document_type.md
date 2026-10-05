@@ -1,11 +1,11 @@
 
-This is an existing dataset in the [official datasets list for local plans](https://www.planning.data.gov.uk/dataset/development-plan-document-type).
+This is a draft dataset in [the planning.data repository](https://digital-land.github.io/specification/dataset/local-plan-document-type/)
 
 ### Existing dataset
 
 This dataset applies to:
-- The type of document that an authority is using to create their overall plan.
-- Use this with development-plan-document to find the plan document that you are interested in. For example, a core strategy.
+- The type of document that an authority is using to create their local plan.
+- Use this with local-plan-document to find the plan document that you are interested in. For example, a core strategy.
 
 | Field | Type | Required | Notes |
 | ----- | ----- | ----- | ----- |
@@ -43,7 +43,7 @@ Entries defined in MHCLG specification:
 * Are there other forms of evidence you would want to store in your evidence base that do not fit this dataset?
 * Do you need to represent data that is not stored in documents? What are the user needs associated with non-documentary evidence?
 
-## Sample additional entries (types)
+## Sample additional entries 
 
 - `area-appraisal`
 - `notice`
@@ -54,4 +54,4 @@ Entries defined in MHCLG specification:
 - `boundary`
 
 ### Associations
-- `belongs_to` `DevelopmentPlanDocument`
+- `belongs_to` `LocalPlanDocument`

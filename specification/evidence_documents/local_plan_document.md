@@ -1,12 +1,12 @@
 
-This is an existing dataset in the [official datasets list for local plans](https://www.planning.data.gov.uk/dataset/development-plan-document).
+This is a draft dataset in [the planning.data repository](https://digital-land.github.io/specification/dataset/local-plan-document/)
 
 ### Existing dataset
 
 This dataset applies to:
-- The documents that an authority uses to create their overall plan. For example, the neighbourhood plan.
-- Every document within a plan. Each row contains a link to a published document on the authority's website.
-- Use this with development-plan-document-type to find the plan document that you are interested in. For example, a transport assessment.
+- The documents that an authority uses to create their local plan.
+- Every document within a local plan. Each row contains a link to a published document on the authority's website.
+- Use this with local-plan-document-type to find the local plan document that you are interested in. For example, a flood assessment.
 
 | Field | Type | Required | Notes |
 | ----- | ----- | ----- | ----- |
@@ -28,8 +28,8 @@ This dataset applies to:
 
 ## Scope for co-design
 
-* Currently a local plan is one instance of a development plan, the neighbourhood plan and inspector's report would be among the others. Is this what you would expect to be included in a development-plan-document dataset? 
 * Is this dataset adequate to store references to all types of documents that make up the evidence base?
+* Is it realistic that each document will have a stable URL on your authority's website to store against its record?
 * Is it beneficial to distinguish between commissioned evidence documents and other types?
 * What additional fields or related datasets might be needed to adequately track evidence creation? 
 * What requirements (legislation, NPPF policies, and other requirements) should evidence be able to demonstrate it addresses? Is type and note sufficient, or would a structured reference back to a specific requirement be beneficial?
@@ -94,9 +94,8 @@ As a policy officer...
 | `end-date` | datetime |  |  |
 
 ### Associations
-- `belongs_to` `Organisation`
-- `belongs_to` `DevelopmentPlan`
-- `has_one` `DevelopmentPlanDocumentType`
+- `belongs_to` `LocalPlan`
+- `has_one` `LocalPlanDocumentType`
 - Audited by the [Audited gem](https://github.com/collectiveidea/audited) tracking changes with associated `User` in a separate, referenceable model
 
 ## Example JSON
