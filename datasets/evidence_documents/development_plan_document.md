@@ -1,17 +1,19 @@
-This is a draft dataset in [the planning.data repository](https://digital-land.github.io/specification/dataset/local-plan-document/).
+This is a published dataset in [the planning.data repository](https://www.planning.data.gov.uk/dataset/development-plan-document).
 
 ### Existing dataset
 
+Typology: document
+
 This dataset applies to:
-- The documents that an authority uses to create their local plan.
-- Every document within a local plan. Each row contains a link to a published document on the authority's website.
-- Use this with local-plan-document-type to find the local plan document that you are interested in. For example, a flood assessment.
+- The documents that an authority uses to create their development plan, such as a local plan.
+- Every document within a development plan. Each row contains a link to a published document on the authority's website.
+- Use this with development-plan-document-type to find the document that you are interested in. For example, a flood assessment.
 
 | Field | Type | Cardinality | Required | Notes |
 | ----- | ----- | ----- | ----- | ----- |
 | `description` | string | 1 |  |  |
-| `local-plan` | string | 1 |  | Reference to the `local-plan` dataset |
-| `document-types` | string | n |  | References to the `local-plan-document-type` codelist |
+| `development-plan` | string | 1 |  | Reference to the `development-plan` dataset |
+| `document-types` | string | n |  | References to document types |
 | `document-url` | url | 1 |  |  |
 | `documentation-url` | url | 1 |  |  |
 | `name` | string | 1 |  |  |
@@ -75,8 +77,8 @@ As a policy officer...
 | `reference` | string | 1 | yes | Unique identifier for the document |
 | `name` | string | 1 | yes |  |
 | `description` | string | 1 |  |  |
-| `local-plan` | string | 1 | yes | Reference to the `local-plan` dataset |
-| `document-types` | string | n | yes | References to the `local-plan-document-type` codelist |
+| `development-plan` | string | 1 | yes | Reference to the `development-plan` dataset |
+| `document-types` | string | n | yes | References to the `development-plan-document-type` codelist |
 | `document-role` | string | 1 |  | Reference to the proposed `document-role` codelist, e.g. `evidence`, `supporting` |
 | `document-url` | url | 1 | yes | Stable URL on the authority's website |
 | `documentation-url` | url | 1 |  |  |
@@ -97,12 +99,12 @@ As a policy officer...
 ### Related proposed datasets
 
 - `document-role` (category typology): `evidence`, `supporting`
-- `requirement` (category typology): the legislation, NPPF paragraphs and other requirements evidence can address
+- `requirement`: the legislation, NPPF paragraphs and other requirements evidence can address
 - `consultant` and `consultant-type`: see the Consultation folder
 
-### Associations
+### Database associations
 - `belongs_to` `LocalPlan`
-- `has_many` `LocalPlanDocumentType` (through a join table)
+- `has_one` `DevelopmentPlanDocumentType`
 - `belongs_to` `DocumentRole`
 - `belongs_to` `Consultant`
 - `has_many` `DevelopmentPolicy` (through a join table)

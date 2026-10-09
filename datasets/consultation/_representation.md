@@ -1,12 +1,12 @@
-# Proposed dataset for further iteration: consultation-response
+This is a draft proposed dataset that does not currently exist in draft or published form.
+
+# Proposed dataset for further iteration: representation
 
 | Field | Type | Cardinality | Required | Notes |
 | ----- | ----- | ----- | ----- | ----- |
 | `reference` | string | 1 | yes |  |
 | `consultation` | string | 1 | yes | Reference to the `consultation` dataset |
-| `question` | string | 1 |  | Consultation question |
 | `comment` | text | 1 | yes | Representation text |
-| `response` | text | 1 |  | Policy officer's response |
 | `development-policy-categories` | string | n |  | References to the existing `development-policy-category` codelist |
 | `notes` | text | 1 |  |  |
 | `organisation` | curie | 1 | yes | LPA |
