@@ -13,14 +13,12 @@ The intent is to:
 
 ## Ethos
 
-* We should demonstrate the *benefits* of proposed additions to the schema and proposed data standards 
-* Additional fields, datasets and standards should be proposed only where a well-defined benefit can be realised
+* We should validate the benefits of proposed additions to the schema and proposed data standards 
 
 ## Conventions in use in this repository
 
 * If a file name begins with `_` it is a placeholder and may be empty at present.
-* Files in a given folder are likely to have relationships which may or may not already be defined.
-* We have left out reference to the tabular conventions used by MHCLG (see section on tabular conventions below) where new datasets are being tested/proposed given they are not currently part of the ecosystem.
+* "Datasets" refers to categories of data collected and made open source by MHCLG. Additional data will be required to accompany these datasets in a local plan-making service, but would not result in open source datasets and are therefore not included in this repository. For example, a policy officer's choice of "tag" to apply to a consultation response serves only an internal use and would not be collected in a national repository.
 
 ## Key references
 
@@ -31,9 +29,21 @@ The intent is to:
 
 ## Tabular conventions used by MHCLG
 
-| Field / Concept | Type / Role | What it Represents | Practical Example |
-| :--- | :--- | :--- | :--- |
-| **`prefix`** | `string` | The namespace or category of the entity (e.g., dataset type). | `"development-plan-document"` |
-| **`reference`** | `string` | The local ID used by the publisher or local authority. | `"DOC-2024-A"` |
-| **`curie`** | *datatype* | A Compact URI combining `prefix` and `reference` (`prefix:reference`), which also functions as a foreign-key-style reference when used across datasets (e.g., `organisation`). | `"development-plan-document:DOC-2024-A"` |
-| **`entity`** | `integer` | A platform-wide unique integer mapped directly to the CURIE. | `4100123` |
+### Relationships and types
+
+Each dataset is a single flat table:
+
+* **Types are codelists**: these are small datasets (`category` typology) holding a `reference` and a `name`, e.g. `local-plan-document-type`.
+* **The record holds the reference**: the record has a field named after the dataset the record points to, e.g. `local-plan` on `local-plan-document`. Codelists never point back.
+* **Prefix, reference and entity**: the `prefix` is the dataset (`local-authority`), the `reference` is the identifier within it (`LND`), and together they make the CURIE `local-authority:LND`. The `entity` is a number planning.data gives the same thing across the whole platform: City of London Corporation is [entity 203](https://www.planning.data.gov.uk/entity/203).
+* **CURIEs are short identifiers**: a CURIE combines a dataset name and a reference, e.g. [`local-authority:LND`](https://www.planning.data.gov.uk/curie/local-authority:LND) is the City of London Corporation. When a CURIE appears in a field, such as `organisation`, it links the record to that thing.
+
+### Versioning
+
+| Field | Records |
+| :--- | :--- |
+| `entry-date` | When the data was created or changed |
+| `start-date` | When the thing came into force |
+| `end-date` | When the thing stopped being in force |
+
+Drafts, edit history and user records stay in the system that produces the data.
