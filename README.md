@@ -34,7 +34,7 @@ The intent is to:
 Each dataset is a single flat table:
 
 * **Types are codelists**: these are small datasets (`category` typology) holding a `reference` and a `name`, e.g. `local-plan-document-type`.
-* **The record holds the reference**: the record has a field named after the dataset the record points to, e.g. `local-plan` on `local-plan-document`. Codelists never point back.
+* **The record holds the reference**: the record that belongs to something holds a field named after it, e.g. `local-plan` on `local-plan-document`.
 * **Prefix, reference and entity**: the `prefix` is the dataset (`local-authority`), the `reference` is the identifier within it (`LND`), and together they make the CURIE `local-authority:LND`. The `entity` is a number planning.data gives the same thing across the whole platform: City of London Corporation is [entity 203](https://www.planning.data.gov.uk/entity/203).
 * **CURIEs are short identifiers**: a CURIE combines a dataset name and a reference, e.g. [`local-authority:LND`](https://www.planning.data.gov.uk/curie/local-authority:LND) is the City of London Corporation. When a CURIE appears in a field, such as `organisation`, it links the record to that thing.
 
