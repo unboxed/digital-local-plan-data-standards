@@ -1,12 +1,6 @@
-This is a published dataset in [the planning.data repository](https://www.planning.data.gov.uk/dataset/development-plan-document-type).
-
-### Existing dataset
-
-Typology: category
-
 This dataset applies to:
-- The types of document published for a development plan.
-- Use this with development-plan-document to find the plan document that you are interested in. For example, a core strategy.
+- The types of document published for a local plan.
+- Use this with local-plan-document to find the plan document that you are interested in. For example, a core strategy.
 
 | Field | Type | Cardinality | Required | Notes |
 | ----- | ----- | ----- | ----- | ----- |
@@ -21,7 +15,6 @@ This dataset applies to:
 | `end-date` | datetime | 1 |  |  |
 
 Current entries in the MHCLG dataset:
-- `local-plan`
 - `adoption-statement`
 - `area-action-plan`
 - `inspectors-report`
@@ -57,4 +50,4 @@ Ended entries (have an `end-date`, so no longer in use):
 | `designation-report` |  |
 
 ### Referenced by
-- `development-plan-document`, through its `document-types` field.
+- `local-plan-document`, through its `document-types` field.
