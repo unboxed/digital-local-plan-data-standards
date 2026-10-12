@@ -1,10 +1,9 @@
-Standards expressed as **must**, **may**, **should**. These reflect user insights and the needs of interoperability within a Digital Local Plan ecosystem.
+Proposed datasets will have fields that mirror this **must**, **may**, **should** format within a JSON schema: https://digital-land.github.io/planning-application-specification-viewer/dataset/planning-application/
 
 Examples while work is in progress:
 
 | # | Area | Standard | Priority |
 |---|------|----------|----------|
-| | Version control | Each document version must have a unique identifier and a status (e.g. draft, submission, adopted). | Must |
 | | Version control | Each policy must record the version of its wording at each plan stage. | Must |
 | | Version control | A representation must reference the version of the policy or document it responds to. | Must |
 | | Version control | A document version should reference the version it supersedes. | Should |

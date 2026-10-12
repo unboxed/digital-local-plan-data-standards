@@ -1,4 +1,11 @@
-This dataset applies to:
+---
+title: Proposed Extensions for Local Plan Document Dataset
+status: Alpha Co-design Draft
+target-dataset: local-plan-document-type
+typology: category
+---
+
+The [local-plan-document-type](https://digital-land.github.io/specification/dataset/local-plan-document-type/) dataset applies to:
 - The types of document published for a local plan.
 - Use this with local-plan-document to find the plan document that you are interested in. For example, a core strategy.
 
