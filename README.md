@@ -11,14 +11,12 @@ The intent is to:
 * surface gaps and ambiguities,
 * prompt discussion.
 
-## Ethos
-
-* We should validate the benefits of proposed additions to the schema and proposed data standards 
+Following codesign, JSON schemas will be added to this repository.
 
 ## Conventions in use in this repository
 
 * If a file name begins with `_` it is a placeholder and may be empty at present.
-* "Datasets" refers to categories of data collected and made open source by MHCLG. Additional data will be required to accompany these datasets in a local plan-making service, but would not result in open source datasets and are therefore not included in this repository. For example, a policy officer's choice of "tag" to apply to a consultation response serves only an internal use and would not be collected in a national repository.
+* "Datasets" refers to categories of data collected and made open source by MHCLG. Additional data will be required to accompany these in a local plan-making service, but would not result in open source datasets and are therefore not included in this repository. For example, a policy officer's choice of "tag" to apply to a consultation response serves only an internal use and would not be collected in a national repository.
 
 ## Key references
 
