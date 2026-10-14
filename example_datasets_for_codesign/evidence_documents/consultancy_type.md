@@ -8,7 +8,7 @@ typology: category
 This is a draft proposed dataset that does not currently exist in draft or published form.
 
 This proposed dataset applies to:
-- The specialism of a consultancy commissioned to produce local plan evidence, e.g. 'ecology', 'viability'.
+- The specialism of a consultancy commissioned to produce evidence documents that support a development plan, e.g. 'ecology', 'viability'.
 
 | Field | Type | Cardinality | Required | Notes |
 | ----- | ----- | ----- | ----- | ----- |
@@ -30,3 +30,6 @@ Proposed entries (draft definitions for co-design):
 ## Scope for co-design
 
 * What additional consultancy types are needed, for example transport, landscape, others?
+
+### Referenced by
+- `consultancy`, through its `consultancy-types` field.

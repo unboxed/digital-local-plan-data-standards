@@ -12,7 +12,7 @@ This proposed dataset applies to:
 | ----- | ----- | ----- | ----- | ----- |
 | `reference` | string | 1 | yes | e.g. `evidence` |
 | `name` | string | 1 | yes | e.g. `Evidence` |
-| `description` | string | 1 |  | Public definition of the role, so it is applied consistently. Proposed addition: not present in comparable category datasets such as `development-plan-type`. |
+| `description` | string | 1 |  | Public definition of the role, so it is applied consistently.|
 | `notes` | text | 1 |  | Editorial or internal notes about the entry |
 | `prefix` | string | 1 | yes |  |
 | `entity` | integer | 1 | yes | Assigned by planning.data |

@@ -7,7 +7,8 @@ target-dataset: consultancy
 This is a draft proposed dataset that does not currently exist in draft or published form.
 
 This proposed dataset applies to:
-- A consultancy commissioned to produce `local-plan-document`s that form the evidence base for a local plan.
+- A consultancy commissioned to produce evidence documents that support a development plan.
+- Use this with the `document` dataset, which references the consultancy through its `consultancy` field.
 
 | Field | Type | Cardinality | Required | Notes |
 | ----- | ----- | ----- | ----- | ----- |
@@ -20,3 +21,6 @@ This proposed dataset applies to:
 | `entry-date` | datetime | 1 | yes | |
 | `start-date` | datetime | 1 | | |
 | `end-date` | datetime | 1 | | |
+
+### Referenced by
+- `document`, through its `consultancy` field.

@@ -134,7 +134,6 @@ Ended entries (have an `end-date`, so no longer in use):
 
 * Can these categories be used to categorise consultation questions as well as policies?
 * Are any topics missing, or too broad or narrow to be useful?
-* Would a specific local-plan-policy-category have any benefit?
 
 ### Referenced by
 - `development-policy`, through its `development-policy-categories` field
