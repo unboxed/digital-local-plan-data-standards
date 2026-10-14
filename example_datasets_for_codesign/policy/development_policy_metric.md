@@ -27,7 +27,7 @@ The [development-policy-metric](https://digital-land.github.io/specification/dat
 
 ## Scope for co-design
 
-* What metrics do policies set that need to be published as data?
+* Is a value and associated metric (type) sufficient?
 
 ### References
 - `development-policy`, through its `development-policy` field.
