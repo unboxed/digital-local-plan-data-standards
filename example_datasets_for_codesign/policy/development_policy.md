@@ -32,6 +32,7 @@ This diff shows the proposed changes to the draft `development-policy` dataset.
     - entry-date
     - start-date
     - end-date
+```
 
 ## Proposed Field Definitions & Validation Rules
 
@@ -55,6 +56,7 @@ This diff shows the proposed changes to the draft `development-policy` dataset.
 
 ## Questions
 * Do you think there is ambiguity around the use of `development-policy` for use within the `local-plan` dataset? What do you think about this decision?
+* Text should be structured in a way that supports machine readability, i.e. with structured and standardised verbs. We can represent that in JSON but perhaps it would not make a separate dataset here.
 * Do figures (diagrams, tables, images) in policies need to be published as data, or is a link to the policy's document enough?
 
 ## Mock JSON Payload

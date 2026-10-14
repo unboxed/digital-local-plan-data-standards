@@ -11,6 +11,8 @@ The intent is to:
 * surface gaps and ambiguities,
 * prompt discussion.
 
+Examination, monitoring, and consultation datasets to be added.
+
 Following codesign, JSON schemas will be added to this repository.
 
 ## Conventions in use in this repository
