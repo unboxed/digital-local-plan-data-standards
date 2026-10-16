@@ -80,6 +80,35 @@
         "withdrawn",
         "revoked"
       ]
+    },
+    "actor": {
+      "description": "A party a policy places a duty or permission on.",
+      "$comment": "Placeholder: values to be agreed through co-design.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["applicant", "developer", "local-planning-authority"]
+    },
+    "metric": {
+      "description": "A measurable quantity a policy constraint applies to.",
+      "$comment": "Placeholder: values to be agreed through co-design. Each value should imply its unit.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": [
+        "affordable-housing-percentage",
+        "building-height-storeys",
+        "dwelling-count"
+      ]
+    },
+    "evidence-document-type": {
+      "description": "A type of document an applicant may be asked to submit as evidence.",
+      "$comment": "Placeholder: values to be agreed through co-design. Distinct from development-plan-document-type.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": [
+        "flood-risk-assessment",
+        "transport-assessment",
+        "heritage-statement"
+      ]
     }
   }
 }
