@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/planning_data_records/development_plan_document_record.schema.json",
+  "title": "Development Plan Document Record",
+  "description": "A document associated with a development plan, aligned with the planning.data.gov.uk development-plan-document dataset: https://digital-land.github.io/specification/dataset/development-plan-document/",
+  "$comment": "Reviewed against the planning.data.gov.uk development-plan-document specification on 2026-10-16.",
+  "type": "object",
+  "required": ["reference", "name", "development-plan", "document-url"],
+  "properties": {
+    "reference": {
+      "type": "string",
+      "description": "A reference for the document that is unique within the dataset and permanent."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the document."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the document."
+    },
+    "development-plan": {
+      "type": "string",
+      "description": "The reference of the development plan the document belongs to."
+    },
+    "document-types": {
+      "type": "array",
+      "description": "The types of document this record refers to.",
+      "items": {
+        "$ref": "../common/codelists.schema.json#/$defs/development-plan-document-type"
+      }
+    },
+    "document-url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL of the document file itself."
+    },
+    "documentation-url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The web page where the documentation for the document can be found."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notes on how the data was made or how it can be interpreted."
+    },
+    "organisation": {
+      "$ref": "#/$defs/curie",
+      "description": "The organisation responsible for the record."
+    },
+    "entry-date": {
+      "$ref": "#/$defs/date",
+      "description": "The date this information was entered as a record."
+    },
+    "start-date": {
+      "$ref": "#/$defs/date",
+      "description": "The date the validity of the record starts."
+    },
+    "end-date": {
+      "$ref": "#/$defs/date",
+      "description": "The date the validity of the record ends."
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$",
+      "description": "A date as YYYY, YYYY-MM or YYYY-MM-DD."
+    },
+    "curie": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+:.+$",
+      "description": "A compact identifier made of a prefix, a colon and a reference, such as local-authority:BUC."
+    }
+  }
+}
