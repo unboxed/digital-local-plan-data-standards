@@ -10,7 +10,7 @@
       "const": "Feature"
     },
     "geometry": {
-      "$ref": "geometry.schema.json#/$defs/polygonal"
+      "$ref": "common/geometry.schema.json#/$defs/area-geometry"
     },
     "properties": {
       "type": "object",

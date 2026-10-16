@@ -25,7 +25,7 @@
             "const": "Feature"
           },
           "geometry": {
-            "$ref": "geometry.schema.json"
+            "$ref": "common/geometry.schema.json"
           },
           "properties": {
             "type": "object"

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.example-org.uk/local-plan/0.1/geometry.schema.json",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/common/geometry.schema.json",
   "title": "Geometry",
-  "description": "A GeoJSON geometry as defined by RFC 7946, with coordinates in WGS84.",
+  "description": "Any GeoJSON geometry as defined by RFC 7946, with coordinates in WGS84. Used where features may be points, lines or areas, such as in layers.",
   "oneOf": [
     { "$ref": "https://geojson.org/schema/Point.json" },
     { "$ref": "https://geojson.org/schema/MultiPoint.json" },
@@ -12,8 +12,8 @@
     { "$ref": "https://geojson.org/schema/MultiPolygon.json" }
   ],
   "$defs": {
-    "polygonal": {
-      "description": "A GeoJSON Polygon or MultiPolygon, with coordinates in WGS84.",
+    "area-geometry": {
+      "description": "A GeoJSON Polygon or MultiPolygon, with coordinates in WGS84. Used for boundaries, which must describe an area rather than a point or a line.",
       "oneOf": [
         { "$ref": "https://geojson.org/schema/Polygon.json" },
         { "$ref": "https://geojson.org/schema/MultiPolygon.json" }
