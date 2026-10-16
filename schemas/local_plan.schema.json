@@ -28,6 +28,13 @@
       "items": {
         "$ref": "planning_data_records/development_plan_document_record.schema.json"
       }
+    },
+    "policy-documents": {
+      "type": "array",
+      "description": "The documents that relate to the plan's policies, as evidence or supporting material. Policies refer to these by reference.",
+      "items": {
+        "$ref": "document.schema.json"
+      }
     }
   },
   "$defs": {

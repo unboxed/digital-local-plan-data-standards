@@ -109,13 +109,6 @@
         "transport-assessment",
         "heritage-impact-assessment"
       ]
-    },
-    "document-role": {
-      "description": "The role a document plays, such as evidence.",
-      "$comment": "Placeholder: values to be agreed through co-design.",
-      "type": "string",
-      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-      "examples": ["evidence", "supporting"]
     }
   }
 }

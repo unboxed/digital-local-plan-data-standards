@@ -14,7 +14,7 @@
   "properties": {
     "reference": {
       "type": "string",
-      "description": "Unique identifier for the policy."
+      "description": "A reference for the policy that is unique within the plan and permanent: it must not change when the plan is updated."
     },
     "policy-title": {
       "type": "string"
@@ -39,9 +39,16 @@
     },
     "evidence": {
       "type": "array",
-      "description": "Documents that support policies as evidence",
+      "description": "References to the plan's policy documents that provide evidence for this policy.",
       "items": {
-        "$ref": "document.schema.json"
+        "type": "string"
+      }
+    },
+    "supporting": {
+      "type": "array",
+      "description": "References to the plan's policy documents that support this policy without being evidence for it.",
+      "items": {
+        "type": "string"
       }
     },
     "structured-policy": {
