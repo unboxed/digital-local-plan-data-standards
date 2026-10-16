@@ -93,14 +93,22 @@
       "$comment": "Placeholder: values to be agreed through co-design. Each value should imply its unit.",
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-      "examples": ["affordable-housing-percentage", "building-height-storeys", "dwelling-count"]
+      "examples": [
+        "affordable-housing-percentage",
+        "building-height-storeys",
+        "dwelling-count"
+      ]
     },
     "evidence-document-type": {
       "description": "A type of document that provides evidence supporting a policy.",
       "$comment": "Placeholder: values to be agreed through co-design. Distinct from development-plan-document-type, which classifies the documents that make up a plan.",
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-      "examples": ["flood-risk-assessment", "transport-assessment", "heritage-impact-assessment"]
+      "examples": [
+        "flood-risk-assessment",
+        "transport-assessment",
+        "heritage-impact-assessment"
+      ]
     },
     "document-role": {
       "description": "The role a document plays, such as evidence.",

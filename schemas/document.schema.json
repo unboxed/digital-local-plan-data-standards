@@ -2,10 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.example-org.uk/local-plan/0.1/document.schema.json",
   "title": "Document",
-  "description": "A piece of evidence that supports one or more policies, such as a flood risk assessment or viability study: the planning.data.gov.uk document record extended with proposed evidence fields. Not to be confused with a development plan document, which makes up the plan itself.", 
-  "allOf": [
-      { "$ref": "planning_data_records/document_record.schema.json" }
-    ],
+  "description": "A piece of evidence that supports one or more policies, such as a flood risk assessment or viability study: the planning.data.gov.uk document record extended with proposed evidence fields. Not to be confused with a development plan document, which makes up the plan itself.",
+  "allOf": [{ "$ref": "planning_data_records/document_record.schema.json" }],
   "type": "object",
   "properties": {
     "document-types": {
