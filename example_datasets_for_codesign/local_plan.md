@@ -22,7 +22,7 @@ The [local-plan](https://digital-land.github.io/specification/dataset/local-plan
 | `period-start-date` | datetime | 1 |  | Start of the plan period |
 | `period-end-date` | datetime | 1 |  | End of the plan period |
 | `adopted-date` | datetime | 1 |  |  |
-| `dataset` | string | 1 |  |  |
+| `dataset` | string | 1 |  | metadata field always set to "local plan" to identify the record standard |
 | `document-url` | url | 1 |  |  |
 | `documentation-url` | url | 1 |  |  |
 | `notes` | text | 1 |  |  |

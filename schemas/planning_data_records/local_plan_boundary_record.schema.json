@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/planning_data_records/local_plan_boundary_record.schema.json",
+  "title": "Local Plan Boundary Record",
+  "description": "The boundary a local plan covers, as a GeoJSON Feature, aligned with the planning.data.gov.uk local-plan-boundary dataset: https://digital-land.github.io/specification/dataset/local-plan-boundary/",
+  "type": "object",
+  "$comment": "Reviewed against the planning.data.gov.uk local-plan-boundary specification on 2026-10-16.",
+  "required": ["type", "geometry", "properties"],
+  "properties": {
+    "type": {
+      "const": "Feature"
+    },
+    "geometry": {
+      "$ref": "../geometry.schema.json#/$defs/polygonal"
+    },
+    "properties": {
+      "type": "object",
+      "required": ["reference", "name"],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "description": "A reference for the boundary that is unique within the dataset and permanent."
+        },
+        "name": {
+          "type": "string",
+          "description": "A name for the boundary."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the boundary."
+        },
+        "organisations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+:.+$"
+          }
+        },
+        "entry-date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        },
+        "start-date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        },
+        "end-date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        }
+      }
+    }
+  }
+}

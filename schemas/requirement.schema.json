@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/requirement.schema.json",
+  "title": "Requirement",
+  "description": "A requirement arising from a local plan policy.",
+  "type": "object",
+  "required": ["requirement-id", "name"],
+  "properties": {
+    "requirement-id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

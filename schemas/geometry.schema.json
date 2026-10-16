@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/geometry.schema.json",
+  "title": "Geometry",
+  "description": "A GeoJSON geometry as defined by RFC 7946, with coordinates in WGS84.",
+  "oneOf": [
+    { "$ref": "https://geojson.org/schema/Point.json" },
+    { "$ref": "https://geojson.org/schema/MultiPoint.json" },
+    { "$ref": "https://geojson.org/schema/LineString.json" },
+    { "$ref": "https://geojson.org/schema/MultiLineString.json" },
+    { "$ref": "https://geojson.org/schema/Polygon.json" },
+    { "$ref": "https://geojson.org/schema/MultiPolygon.json" }
+  ],
+  "$defs": {
+    "polygonal": {
+      "description": "A GeoJSON Polygon or MultiPolygon, with coordinates in WGS84.",
+      "oneOf": [
+        { "$ref": "https://geojson.org/schema/Polygon.json" },
+        { "$ref": "https://geojson.org/schema/MultiPolygon.json" }
+      ]
+    }
+  }
+}

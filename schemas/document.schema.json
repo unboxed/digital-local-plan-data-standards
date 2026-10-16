@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/document.schema.json",
+  "title": "Document",
+  "description": "A document that must or may be submitted as evidence.",
+  "type": "object",
+  "required": ["document-type", "mandatory"],
+  "properties": {
+    "document-type": {
+      "type": "string"
+    },
+    "mandatory": {
+      "type": "boolean"
+    }
+  }
+}

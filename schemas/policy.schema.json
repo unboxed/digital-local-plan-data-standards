@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/policy.schema.json",
+  "title": "Local Plan Policy Schema",
+  "description": "Schema for a local plan policy.",
+  "type": "object",
+  "required": [
+    "policy-id",
+    "policy-title",
+    "policy-text",
+    "structured-policy",
+    "boundaries"
+  ],
+  "properties": {
+    "policy-id": {
+      "type": "string",
+      "description": "Unique identifier for the policy."
+    },
+    "policy-title": {
+      "type": "string"
+    },
+    "policy-text": {
+      "type": "object",
+      "description": "Human-readable narrative and context.",
+      "required": ["raw-text"],
+      "properties": {
+        "raw-text": {
+          "type": "string",
+          "description": "The exact verbatim text of the policy clause."
+        }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "description": "Links to child requirement specifications.",
+      "items": {
+        "$ref": "requirement.schema.json"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "description": "Documents that must be submitted as evidence.",
+      "items": {
+        "$ref": "document.schema.json"
+      }
+    },
+    "structured-policy": {
+      "$ref": "structured-policy.schema.json"
+    },
+    "boundaries": {
+      "type": "array",
+      "description": "Spatial boundaries the policy applies to, either in full or by reference.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "policy_boundary.schema.json"
+          },
+          {
+            "type": "object",
+            "required": ["boundary-reference"],
+            "properties": {
+              "boundary-reference": {
+                "type": "string",
+                "description": "The reference of a boundary defined elsewhere, such as the plan's local-plan-boundary."
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "minItems": 1
+    },
+    "layers": {
+      "type": "array",
+      "description": "Spatial layers associated with the policy.",
+      "items": {
+        "$ref": "layer.schema.json"
+      }
+    }
+  }
+}

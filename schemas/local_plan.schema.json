@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/local_plan.schema.json",
+  "title": "Local Plan",
+  "description": "A full local plan: the planning.data.gov.uk local-plan record extended with the plan's chapters and policies.",
+  "allOf": [{ "$ref": "planning_data_records/local_plan_record.schema.json" }],
+  "type": "object",
+  "required": ["chapters"],
+  "properties": {
+    "chapters": {
+      "type": "array",
+      "description": "The chapters of the plan, in order.",
+      "items": {
+        "$ref": "#/$defs/chapter"
+      },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "chapter": {
+      "type": "object",
+      "required": ["chapter-id", "title"],
+      "properties": {
+        "chapter-id": {
+          "type": "string"
+        },
+        "chapter-number": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "introduction": {
+          "type": "string",
+          "description": "Introductory or supporting text for the chapter."
+        },
+        "policies": {
+          "type": "array",
+          "description": "The policies in this chapter, in order.",
+          "items": {
+            "$ref": "policy.schema.json"
+          }
+        }
+      }
+    }
+  }
+}

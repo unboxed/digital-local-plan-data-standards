@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example-org.uk/local-plan/0.1/policy_boundary.schema.json",
+  "title": "Policy Boundary",
+  "description": "The spatial extent a local plan policy applies to, as a GeoJSON Feature. Proposed for a future planning.data.gov.uk dataset.",
+  "type": "object",
+  "required": ["type", "geometry", "properties"],
+  "properties": {
+    "type": {
+      "const": "Feature"
+    },
+    "geometry": {
+      "$ref": "geometry.schema.json#/$defs/polygonal"
+    },
+    "properties": {
+      "type": "object",
+      "required": ["reference", "name"],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "description": "A reference for the policy boundary that is unique within the dataset and permanent."
+        },
+        "name": {
+          "type": "string",
+          "description": "A name for the policy boundary."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the policy boundary."
+        },
+        "organisations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+:.+$"
+          }
+        },
+        "entry-date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        },
+        "start-date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        },
+        "end-date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        }
+      }
+    }
+  }
+}
