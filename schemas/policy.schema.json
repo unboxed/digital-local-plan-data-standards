@@ -5,14 +5,14 @@
   "description": "Schema for a local plan policy.",
   "type": "object",
   "required": [
-    "policy-id",
+    "reference",
     "policy-title",
     "policy-text",
     "structured-policy",
     "boundaries"
   ],
   "properties": {
-    "policy-id": {
+    "reference": {
       "type": "string",
       "description": "Unique identifier for the policy."
     },

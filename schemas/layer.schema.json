@@ -4,12 +4,12 @@
   "title": "Layer",
   "description": "A spatial layer associated with a local plan policy, as a GeoJSON FeatureCollection.",
   "type": "object",
-  "required": ["type", "layer-id", "name", "features"],
+  "required": ["type", "reference", "name", "features"],
   "properties": {
     "type": {
       "const": "FeatureCollection"
     },
-    "layer-id": {
+    "reference": {
       "type": "string"
     },
     "name": {

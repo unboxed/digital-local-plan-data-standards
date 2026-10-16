@@ -33,9 +33,9 @@
   "$defs": {
     "chapter": {
       "type": "object",
-      "required": ["chapter-id", "title"],
+      "required": ["reference", "title"],
       "properties": {
-        "chapter-id": {
+        "reference": {
           "type": "string"
         },
         "chapter-number": {

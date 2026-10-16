@@ -4,9 +4,9 @@
   "title": "Requirement",
   "description": "A requirement arising from a local plan policy.",
   "type": "object",
-  "required": ["requirement-id", "name"],
+  "required": ["reference", "name"],
   "properties": {
-    "requirement-id": {
+    "reference": {
       "type": "string"
     },
     "name": {
