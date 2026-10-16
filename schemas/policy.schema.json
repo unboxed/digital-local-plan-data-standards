@@ -39,7 +39,7 @@
     },
     "evidence": {
       "type": "array",
-      "description": "Documents that must be submitted as evidence.",
+      "description": "Documents that support policies as evidence",
       "items": {
         "$ref": "document.schema.json"
       }

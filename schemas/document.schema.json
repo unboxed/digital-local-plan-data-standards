@@ -2,15 +2,58 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.example-org.uk/local-plan/0.1/document.schema.json",
   "title": "Document",
-  "description": "A document that must or may be submitted as evidence.",
+  "description": "A piece of evidence that supports one or more policies, such as a flood risk assessment or viability study: the planning.data.gov.uk document record extended with proposed evidence fields. Not to be confused with a development plan document, which makes up the plan itself.", 
+  "allOf": [
+      { "$ref": "planning_data_records/document_record.schema.json" }
+    ],
   "type": "object",
-  "required": ["document-type", "mandatory"],
   "properties": {
-    "document-type": {
-      "type": "string"
+    "document-types": {
+      "type": "array",
+      "description": "The types of evidence document this record refers to.",
+      "items": {
+        "$ref": "common/codelists.schema.json#/$defs/evidence-document-type"
+      }
     },
-    "mandatory": {
-      "type": "boolean"
+    "document-role": {
+      "$ref": "common/codelists.schema.json#/$defs/document-role",
+      "description": "The role the document plays, distinguishing evidence from other documents in the dataset."
+    },
+    "dataset": {
+      "type": "string",
+      "description": "A reference to evidence held as data, such as a dashboard or table, rather than as a static document."
+    },
+    "development-policies": {
+      "type": "array",
+      "description": "References to the policies this document supports.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consultancy": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+:.+$",
+      "description": "A reference to the consultancy commissioned to produce the document."
+    },
+    "requirements": {
+      "type": "array",
+      "description": "References to the requirements this document addresses, matching the reference of each requirement.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "commenced-date": {
+      "$ref": "planning_data_records/document_record.schema.json#/$defs/date",
+      "description": "When work on the document began."
+    },
+    "finalised-date": {
+      "$ref": "planning_data_records/document_record.schema.json#/$defs/date",
+      "description": "When the document was signed off or completed."
+    },
+    "superseded": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+:.+$",
+      "description": "A reference to the previous version of this record that this document supersedes."
     }
   }
 }
