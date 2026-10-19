@@ -50,7 +50,7 @@ This diff shows the proposed changes to the draft `development-policy` dataset.
 ## Related Proposed Datasets
 
 * **`chapter`** – A section of a local plan; belongs to `local-plan`.
-* **`development-policy-type`** *(Category Typology)* – Standardises policy types, e.g. `strategic`, `non-strategic`, `site-allocation`.
+* **`development-policy-type`** *(Category Typology)* – Standardises policy types, e.g. `strategic`, `non-strategic`.
 * **`development-policy-category`** *(Category Typology)* – Standardises policy topics, e.g. `affordable-housing`. Existing codelist.
 * **`vision`** – The plan's vision that policies deliver, which can change over the process of plan-making.
 

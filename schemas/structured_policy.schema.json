@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.example-org.uk/local-plan/0.1/structured-policy.schema.json",
   "title": "Structured Policy",
-  "description": "Machine-readable execution logic.",
+  "description": "Example for structured policy.",
   "type": "object",
   "required": ["actors", "verb", "target-actions", "constraints"],
   "properties": {
@@ -16,7 +16,7 @@
     "verb": {
       "type": "string",
       "enum": ["MUST", "MUST_NOT", "SHOULD", "MAY"],
-      "description": "Deontic modality driving the software logic."
+      "description": ""
     },
     "target-actions": {
       "type": "array",
