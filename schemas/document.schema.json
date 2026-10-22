@@ -13,9 +13,9 @@
         "$ref": "common/codelists.schema.json#/$defs/evidence-document-type"
       }
     },
-    "dataset": {
+    "baseline": {
       "type": "string",
-      "description": "A reference to evidence held as data, such as a dashboard or table, rather than as a static document."
+      "description": "Captures baseline formula."
     },
     "consultancy": {
       "type": "string",

@@ -24,7 +24,7 @@ This diff shows the proposed changes to the current `document` dataset.
     - document-types
 +   - document-role
     - document-url
-+   - dataset
++   - baseline-formula
 +   - development-policies
 +   - consultancy
 +   - requirements
@@ -45,7 +45,7 @@ This diff shows the proposed changes to the current `document` dataset.
 | Field Name | Typology / Type | Cardinality | Required | Notes & Codelist Linkages |
 | :--- | :--- | :--- | :--- | :--- |
 | `document-role` | string (CURIE) | 1 | | Links to a new proposed `document-role` codelist, e.g. `evidence`. Distinguishes evidence from other documents held in this dataset. |
-| `dataset` | string | 1 | | Captures references for evidence held directly in dynamic data dashboards/tables rather than static text files. |
+| `baseline-formula` | string | 1 | | Captures baseline formula. |
 | `development-policies` | string (List) | n | | References to the `development-policy` records this document supports. An evidence document can support many policies, so the reference lives here rather than on the policy. |
 | `consultancy` | string (CURIE) | 1 | | Reference to a proposed `consultancy` dataset recording the consultancy commissioned to produce the document. |
 | `requirements` | string (List) | n | | References linking the document to specific legislation, NPPF policy tags, or local statutory benchmarks. |
