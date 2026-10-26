@@ -5,6 +5,8 @@ target-dataset: development-policy
 typology: policy
 ---
 
+**To be updated and aligned - see _versioning_metadata.md and clause.md which may influence this proposal if favoured during codesign.**
+
 This proposes changes to the draft [development-policy](https://digital-land.github.io/specification/dataset/development-policy/) dataset in the planning.data repository, so it can be used for local plans. It applies to:
 - Each policy in a development plan, including those in a local plan.
 - Use this with development-policy-category to find policies on a topic. For example, all affordable housing policies.
