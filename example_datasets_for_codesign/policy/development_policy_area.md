@@ -26,11 +26,5 @@ The [development-policy-area](https://digital-land.github.io/specification/datas
 | `start-date` | datetime | 1 |  |  |
 | `end-date` | datetime | 1 |  |  |
 
-## Scope for co-design
-
-* Is this the right place for the areas shown on a policies map?
-* Policies that apply to the whole plan area need an area record nevertheless. Do you agree?
-* In addition to the boundary, do you need to list which GIS layers this policy relates to?
-
 ### References
 - `development-policy`, through its `development-policies` field.

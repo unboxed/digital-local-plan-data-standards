@@ -32,7 +32,7 @@ Proposed entries (draft definitions for co-design):
 ## Scope for co-design
 
 * What requirements (legislation, NPPF policies, and other requirements) should evidence be able to demonstrate it addresses?
-* How granular should requirements be? Is paragraph the right unit?
+* How granular should requirements be? Is new referencable paragraph the right unit?
 * NPPF paragraph numbers change between versions. How should requirements track this?
 
 ### Referenced by

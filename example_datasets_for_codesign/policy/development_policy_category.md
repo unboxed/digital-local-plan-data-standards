@@ -130,10 +130,5 @@ Ended entries (have an `end-date`, so no longer in use):
 - `water-supply`
 - `wastewater`
 
-## Scope for co-design
-
-* Can these categories be used to categorise consultation questions as well as policies?
-* Are any topics missing, or too broad or narrow to be useful?
-
 ### Referenced by
 - `development-policy`, through its `development-policy-categories` field

@@ -27,7 +27,7 @@ Proposed entries (draft definitions for co-design):
 ## Scope for co-design
 
 * What additional roles are needed?
-* Are the draft definitions of `evidence` and `supporting` accurate and distinct enough to be applied consistently?
+* Are the draft definitions of `evidence` and `background` accurate and distinct enough to be applied consistently?
 * Is a role a property of the document itself, or of its relationship to a particular policy?
 * In the above sense, can a document have more than one role? This determines whether the role field on `local-plan-document` has a cardinality of 1 or n.
 * Should the dataset be named `local-plan-document-role` to avoid clashing with roles for other kinds of document in future?

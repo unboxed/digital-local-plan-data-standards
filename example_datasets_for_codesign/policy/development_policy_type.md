@@ -29,7 +29,7 @@ Proposed entries (draft definitions for co-design):
 ## Scope for co-design
 
 * What additional policy types are needed?
-* Can a policy have more than one type, e.g. a strategic site allocation?
+* Can a policy have more than one type?
 
 ### Referenced by
 - `development-policy`, through its `development-policy-type` field.

@@ -51,9 +51,8 @@ Current entries proposed to move to `document-type`:
 
 ## Scope for co-design
 
-* What plan document types are missing from this list?
+* What plan document types are still missing from this list?
 * Process documents such as `adoption-statement`, `inspectors-report` and `local-development-scheme` are neither part of the plan nor evidence. Should they stay here or have their own type?
-* Published records already use types not listed here, such as `examination-hearing-statement`. Where should these sit?
 
 ### Referenced by
 - `development-plan-document`, through its `document-types` field.

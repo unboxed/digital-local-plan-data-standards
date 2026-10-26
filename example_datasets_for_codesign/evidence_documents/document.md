@@ -24,7 +24,7 @@ This diff shows the proposed changes to the current `document` dataset.
     - document-types
 +   - document-role
     - document-url
-+   - baseline-formula
++   - baseline-data
 +   - development-policies
 +   - consultancy
 +   - requirements
@@ -45,13 +45,13 @@ This diff shows the proposed changes to the current `document` dataset.
 | Field Name | Typology / Type | Cardinality | Required | Notes & Codelist Linkages |
 | :--- | :--- | :--- | :--- | :--- |
 | `document-role` | string (CURIE) | 1 | | Links to a new proposed `document-role` codelist, e.g. `evidence`. Distinguishes evidence from other documents held in this dataset. |
-| `baseline-formula` | string | 1 | | Captures baseline formula. |
+| `baseline-data` | string | 1 | | Captures baseline formula. |
 | `development-policies` | string (List) | n | | References to the `development-policy` records this document supports. An evidence document can support many policies, so the reference lives here rather than on the policy. |
 | `consultancy` | string (CURIE) | 1 | | Reference to a proposed `consultancy` dataset recording the consultancy commissioned to produce the document. |
 | `requirements` | string (List) | n | | References linking the document to specific legislation, NPPF policy tags, or local statutory benchmarks. |
 | `commenced-date` | datetime | 1 | | When official work or drafting on the document began. |
 | `finalised-date` | datetime | 1 | | When the document was signed off or completed. |
-| `superseded` | string (CURIE) | 1 | | Reference to the previous version of this record, e.g. where a published evidence document is updated at a later stage of the plan. See Questions. |
+| ~~`superseded`~~ | ~~string (CURIE)~~ | ~~1~~ | | ~~Reference to the previous version of this record, e.g. where a published evidence document is updated at a later stage of the plan. See Questions.~~ |
 
 ## Related Proposed Datasets
 
@@ -63,12 +63,14 @@ This diff shows the proposed changes to the current `document` dataset.
 ## Questions
 * Do all evidence documents have a stable URL currently?
 * There are procured evidence documents, public evidence sources and what other types? The proposed datasets address procured documents, are datasets needed for the other types?
-* `superseded` is proposed to store a reference to the previous version of the record, e.g. if a published evidence document is updated at a later stage of the plan. Is this a real use case?
+* `superseded` was proposed to store a reference to the previous version of the record, e.g. if a published evidence document is updated at a later stage of the plan. Is there a use for this in terms of data collection or standardisation in the ecosystem? It has been crossed out due to ambiguity in the term "superseded".
 * Are any additional fields needed to track versions? e.g. why the new version supersedes the old one?
 * What requirements (legislation, NPPF policies, and other requirements) should evidence be able to demonstrate it addresses?
 * Is `document-role` needed, or is `document-types` enough to identify evidence?
 
 ## Mock JSON Payload
+
+To add: baseline_data
 
 ```json
 {
@@ -94,7 +96,6 @@ This diff shows the proposed changes to the current `document` dataset.
   ],
   "commenced-date": "2025-04-12T09:00:00Z",
   "finalised-date": "2026-02-10T16:30:00Z",
-  "superseded": "",
   "notes": "Version 1.2 updated following environment agency consultation reviews.",
   "organisations": [
     "local-authority-eng:TOT"
