@@ -10,6 +10,8 @@ The examples follow the [planning.data specification](https://github.com/digital
 
 An ecosystem standard for exchanging data between plan-making tools would likely take a different form: a JSON Schema with an agreed exchange format. This will be developed in a later stage of the project.
 
+An exchange standard would not necessarily cover the same data as the national datasets. Some data, such as the structure of consultation responses, is worth standardising so that plan-making tools can share it, but may not need to be collected nationally.
+
 The models support publishing data at any plan-making stage. When data is collected is a decision for MHCLG.
 
 ## Key suggestions so far
