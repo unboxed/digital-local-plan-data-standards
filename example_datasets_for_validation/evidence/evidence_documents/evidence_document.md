@@ -66,7 +66,6 @@ An evidence document produced or procured to support policies in a plan, such as
 | `development-policies` | string (list) | | Policies the document was produced to support. A document can support many policies, so the link lives here rather than on the policy. |
 | `requirements` | string (list) | | Legislation, NPPF paragraphs or local benchmarks the document addresses. |
 | `baseline-data` | string | | Baseline formula or other information. To be defined. |
-| `base-date` | datetime | | The date the evidence's data is as at. Often a year or more before `finalised-date`, and usually what matters for currency. |
 | `commenced-date` | datetime | | When work on the document began. |
 | `finalised-date` | datetime | | When the document was signed off. |
 | `replaces` | string (CURIE) | | The `evidence-document` this edition replaces in full. Blank for a first edition. |
@@ -124,7 +123,6 @@ If the optional `development-policy-version` dataset were adopted, each version 
   "development-policies": ["policy-tot-2026-cc1", "policy-tot-2026-inf4"],
   "requirements": ["nppf-paragraph-160", "flood-water-management-act-2010"],
   "baseline-data": "",
-  "base-date": "2025-03-31T00:00:00Z",
   "commenced-date": "2025-04-12T09:00:00Z",
   "finalised-date": "2026-02-10T16:30:00Z",
   "replaces": "evidence-document:doc-lp-2021-flood-01",

@@ -216,7 +216,6 @@ Based on the existing `document` dataset, shown as a diff against it.
 ```diff
   dataset: evidence-document
   fields:
-+   - base-date
 +   - baseline-data
 +   - commenced-date
     - description
