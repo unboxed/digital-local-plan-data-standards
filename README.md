@@ -4,6 +4,13 @@ This is an experimental, public repository for co-designing data standards for t
 
 It is informed by prototypes and user research from the Digital Local Plans Discovery and Alpha, carried out with the City of London, and builds on work already underway and coordinated by MHCLG data teams.
 
+## Purpose
+
+* provide concrete examples for co-design sessions
+* surface gaps and ambiguities
+* prompt discussion
+* begin drafting schemas for technical co-design
+
 ## Approach
 
 The examples follow the [planning.data specification](https://github.com/digital-land/specification) conventions, so they can be compared directly with existing MHCLG datasets.
@@ -30,12 +37,5 @@ The models support publishing data at any plan-making stage. When data is collec
 * `evidence_data_model.md` – evidence documents
 * `development_policy_version.md` – option for policy versions
 * `proposed_changes_diff.md` – all changes as diffs against the planning.data specification
-
-## Purpose
-
-* provide concrete examples for co-design sessions
-* surface gaps and ambiguities
-* prompt discussion
-* begin drafting schemas for technical co-design
 
 Examination datasets to be added.
